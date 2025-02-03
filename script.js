@@ -67,12 +67,12 @@ function drawText(ctx, textX, textY) {
     gradient.addColorStop(1, "#0085FF"); // Light blue
 
     // Name Styling - Large, bold, and gradient
-    ctx.font = "bold 42px Arial";
+    ctx.font = "bold 52px Arial";
     ctx.fillStyle = gradient;
     ctx.fillText(name, textX, textY);
 
     // Role Styling - Medium size, bold, and stylish gold color
-    ctx.font = "bold 30px Arial";
+    ctx.font = "bold 38px Arial";
     ctx.fillStyle = "#D4AF37"; // Gold color
     ctx.fillText(role, textX, textY + 55);
 
