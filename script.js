@@ -72,12 +72,12 @@ function drawText(ctx, textX, textY) {
     ctx.fillText(name, textX, textY);
 
     // Role Styling - Medium size, bold, and stylish gold color
-    ctx.font = "bold 38px Arial";
+    ctx.font = "bold 42px Arial";
     ctx.fillStyle = "#D4AF37"; // Gold color
     ctx.fillText(role, textX, textY + 55);
 
     // District Styling - Small, sleek, and subtle silver color
-    ctx.font = "30px Arial";
+    ctx.font = "38px Arial";
     ctx.fillStyle = "#A8A9AD"; // Soft silver
     ctx.fillText(district, textX, textY + 100);
 
