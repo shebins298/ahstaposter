@@ -74,7 +74,7 @@ document.getElementById("downloadBtn").addEventListener("click", function () {
     // Create an anchor element and simulate a click to download
     const link = document.createElement("a");
     link.href = imageUrl;
-    link.download = "generated-image.png";  // Set the default file name
+    link.download = "AHSTA STATE CONFERENCE 2025.png";  // Set the default file name
     link.click();  // Trigger the download
 });
 
