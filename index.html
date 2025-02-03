@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Template Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Image Template Generator</h2>
+        
+        <label for="photoInput" class="file-label">Upload Photo</label>
+        <input type="file" id="photoInput" accept="image/*" class="file-input">
+        
+        <input type="text" id="nameInput" class="text-input" placeholder="Enter Name">
+        <input type="text" id="roleInput" class="text-input" placeholder="Enter Role">
+        <input type="text" id="districtInput" class="text-input" placeholder="Enter District">
+        
+        <button id="generateBtn" class="btn">Generate Image</button>
+        
+        <div class="canvas-container">
+            <canvas id="templateCanvas"></canvas>
+        </div>
+        
+        <button id="downloadBtn" class="btn hidden">Download Image</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

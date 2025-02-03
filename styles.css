@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    margin: 30px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Title */
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+.text-input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* File Input */
+.file-label {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+.file-input {
+    display: none;
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    width: 90%;
+    max-width: 200px;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Canvas */
+.canvas-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+canvas {
+    border: 1px solid #ccc;
+    max-width: 100%;
+}
+
+/* Hide Download Button Initially */
+.hidden {
+    display: none;
+}
