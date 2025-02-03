@@ -19,13 +19,30 @@ document.getElementById("generateBtn").addEventListener("click", function () {
                 const userImg = new Image();
                 userImg.src = event.target.result;
                 userImg.onload = function () {
-                    const photoWidth = 500;
-                    const photoHeight = 500;
-                    const photoX = canvas.width - photoWidth - 50; // Bottom-right corner
-                    const photoY = canvas.height - photoHeight - 50;
+                    const maxPhotoWidth = 500;
+                    const maxPhotoHeight = 500;
+                    const photoX = canvas.width - maxPhotoWidth - 50; // Bottom-right corner
+                    const photoY = canvas.height - maxPhotoHeight - 50;
 
-                    ctx.drawImage(userImg, photoX, photoY, photoWidth, photoHeight); // Draw photo
-                    drawText(ctx, photoX - 20, photoY + 40); // Adjust text position
+                    // Maintain aspect ratio
+                    const aspectRatio = userImg.width / userImg.height;
+                    let drawWidth = maxPhotoWidth;
+                    let drawHeight = maxPhotoHeight;
+
+                    if (aspectRatio > 1) {
+                        // Landscape image
+                        drawHeight = maxPhotoWidth / aspectRatio;
+                    } else {
+                        // Portrait or square image
+                        drawWidth = maxPhotoHeight * aspectRatio;
+                    }
+
+                    // Center the photo properly
+                    const adjustedX = photoX + (maxPhotoWidth - drawWidth) / 2;
+                    const adjustedY = photoY + (maxPhotoHeight - drawHeight) / 2;
+
+                    ctx.drawImage(userImg, adjustedX, adjustedY, drawWidth, drawHeight); // Draw photo
+                    drawText(ctx, adjustedX - 30, adjustedY + 50); // Adjust text position
                 };
             };
             reader.readAsDataURL(photoInput);
@@ -67,6 +84,7 @@ function drawText(ctx, textX, textY) {
     document.getElementById("downloadBtn").classList.remove("hidden");
 }
 
+// Download function
 document.getElementById("downloadBtn").addEventListener("click", function () {
     const canvas = document.getElementById("templateCanvas");
     const imageUrl = canvas.toDataURL("image/png");  // Get the image URL from the canvas
@@ -77,5 +95,3 @@ document.getElementById("downloadBtn").addEventListener("click", function () {
     link.download = "AHSTA STATE CONFERENCE 2025.png";  // Set the default file name
     link.click();  // Trigger the download
 });
-
-
